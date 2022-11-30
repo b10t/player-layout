@@ -5,14 +5,19 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <style>
-      button.player {
+      .player-button {
         border-style: none;
         cursor: pointer;
         background-color: transparent;
         font-size: xx-large;
         padding: 20px;
       }
-      i.player {
+      .button-container {
+        display: flex;
+        flex-direction: row;
+        background-color: black;
+      }
+      .player-icon {
         color: white;
       }
       .player-container {
@@ -30,37 +35,25 @@
 
       <div class="js-video-container video-container"></div>
 
-      <div style="background-color: black; flex-direction: row;">
-        <button class="js-play-button player">
-          <i class="fa fa-play player" aria-hidden="true"></i>
+      <div class="button-container">
+        <button class="js-play-button player-button">
+          <i class="fa fa-play player-icon" aria-hidden="true"></i>
         </button>
-        <button class="js-pause-button player" hidden>
-          <i class="fa fa-pause player" aria-hidden="true"></i>
+        <button class="js-pause-button player-button" hidden>
+          <i class="fa fa-pause player-icon" aria-hidden="true"></i>
         </button>
-        <button class="js-volume-button player">
-          <i class="fa fa-volume-off player" aria-hidden="true"></i>
+        <button class="js-volume-button player-button">
+          <i class="fa fa-volume-off player-icon" aria-hidden="true"></i>
         </button>
-        <button class="js-mute-button player" hidden>
-          <i class="fa fa-volume-up player" aria-hidden="true"></i>
+        <button class="js-mute-button player-button" hidden>
+          <i class="fa fa-volume-up player-icon" aria-hidden="true"></i>
+        </button>
+        <div style="flex-grow: 1;"></div>
+        <button class="js-fullscreen-button player-button">
+          <i class="fa fa-arrows-alt player-icon" aria-hidden="true"></i>
         </button>
       </div>
 
-      <!-- <div>
-        <button class="js-play-button">Play</button>
-        <button class="js-pause-button" hidden>Pause</button>
-        <button class="js-volume-button">Volume</button>
-        <button class="js-mute-button" hidden>Mute</button>
-        <button class="js-fullscreen-button">Fullscreen</button>
-      </div>
-      <div style="color: white;">
-        <span class="js-current-time"></span>
-        —
-        <span class="js-duration"></span>
-      </div>
-
-      <div class="js-progress" style="background-color: grey;">
-        <div class="js-progress-slider" style="background-color: red;">Прогресс</div>
-      </div> -->
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
