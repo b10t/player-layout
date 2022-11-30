@@ -13,21 +13,26 @@
       i.player {
         color: white;
       }
-      div.player {
+      .player-container {
+        display: flex;
+        flex-direction: column;
         box-shadow: 0 0 10px rgba(0,0,0,1);
+      }
+      .video-container {
+        flex-grow: 1;
       }
     </style>
   </head>
   <body>
-    <div class="player" id="player" style="width: 800px; height: 600px;">
+    <div class="player-container" id="player" style="width: 800px; height: 600px;">
 
-      <div class="js-video-container" style="width: 100%; height: 100%"></div>
+      <div class="js-video-container video-container"></div>
 
-      <div style="background-color: black">
+      <div style="background-color: black; flex-direction: row;">
         <button class="js-play-button player">
           <i class="fa fa-play player" aria-hidden="true"></i>
         </button>
-        <button class="js-pause-button  player">
+        <button class="js-pause-button player">
           <i class="fa fa-pause player" aria-hidden="true"></i>
         </button>
       </div>
@@ -38,7 +43,7 @@
         <button class="js-volume-button">Volume</button>
         <button class="js-mute-button" hidden>Mute</button>
         <button class="js-fullscreen-button">Fullscreen</button>
-      </div> -->
+      </div>
       <div style="color: white;">
         <span class="js-current-time"></span>
         —
@@ -47,7 +52,7 @@
 
       <div class="js-progress" style="background-color: grey;">
         <div class="js-progress-slider" style="background-color: red;">Прогресс</div>
-      </div>
+      </div> -->
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
