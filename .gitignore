@@ -162,3 +162,4 @@ cython_debug/
 .vscode/
 *.zip
 *.mp4
+layout.png
