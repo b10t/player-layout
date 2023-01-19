@@ -5,6 +5,12 @@
     <meta charset="utf-8">
     <link rel="icon" href="favicon.png" type="image/png" />
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
     <style>
       .player-container {
         display: flex;
@@ -20,6 +26,7 @@
         display: flex;
         background-color: black;
         align-items: center;
+        padding-bottom: 4px;
       }
       .player-container .button-container .player-button {
         border-style: none;
@@ -29,13 +36,21 @@
         width: 35px;
         height: 35px;
         color: white;
-        margin-left: 1px;
-        margin-bottom: 4px;
+        /* margin-left: 1px;
+        margin-bottom: 4px; */
       }
       .player-container .button-container .progress-bar-container {
         display: flex;
         flex-grow: 1;
         align-items: center;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+      }
+      .player-container .button-container .progress-bar-container .progress-bar{
+        flex-grow: 1;
+      }
+      .player-container .button-container .right-buttons{
+        margin-right: 1px;
       }
     </style>
   </head>
@@ -45,22 +60,38 @@
       <div class="js-video-container video-container"></div>
 
       <div class="button-container">
-        <button class="js-play-button player-button">
-          <i class="fa fa-play" aria-hidden="true"></i>
-        </button>
-        <button class="js-pause-button player-button" hidden>
-          <i class="fa fa-pause" aria-hidden="true"></i>
-        </button>
-        <button class="js-volume-button player-button">
-          <i class="fa fa-volume-off" aria-hidden="true"></i>
-        </button>
-        <button class="js-mute-button player-button" hidden>
-          <i class="fa fa-volume-up" aria-hidden="true"></i>
-        </button>
-        <div class="progress-bar-container"></div>
-        <button class="js-fullscreen-button player-button">
-          <i class="fa fa-arrows-alt" aria-hidden="true"></i>
-        </button>
+
+        <div class="left-buttons">
+          <button class="js-play-button player-button">
+            <i class="fa fa-play" aria-hidden="true"></i>
+          </button>
+          <button class="js-pause-button player-button" hidden>
+            <i class="fa fa-pause" aria-hidden="true"></i>
+          </button>
+          <button class="js-volume-button player-button">
+            <i class="fa fa-volume-off" aria-hidden="true"></i>
+          </button>
+          <button class="js-mute-button player-button" hidden>
+            <i class="fa fa-volume-up" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div class="progress-bar-container">
+          <div>
+            <span class="js-current-time"></span>
+          </div>
+          <div class="progress-bar">----</div>
+          <div>
+            <span class="js-duration"></span>
+          </div>
+        </div>
+
+        <div class="right-buttons">
+          <button class="js-fullscreen-button player-button">
+            <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+          </button>
+        </div>
+
       </div>
 
     </div>
