@@ -36,8 +36,6 @@
         width: 35px;
         height: 35px;
         color: white;
-        /* margin-left: 1px;
-        margin-bottom: 4px; */
       }
       .player-container .button-container .progress-bar-container {
         display: flex;
@@ -49,21 +47,17 @@
       .player-container .button-container .progress-bar-container .progress-bar{
         display: flex;
         flex-grow: 1;
-        background-color: grey;
         margin-left: 10px;
         margin-right: 10px;
-        height: 5px;
+        height: 18px;
         border-radius: 3px;
         align-items: center;
-        /* display: inline-block; */
       }
       .player-container .button-container .progress-bar-container .progress-bar .progress-bar-slider{
-        /* flex-grow: 1; */
         background-color: red;
         height: 5px;
         border-radius: 3px;
         display: inline-block;
-        /* margin-bottom: 10px; */
       }
       .player-container .button-container .progress-bar-container .progress-bar .dot{
         height: 8px;
@@ -72,10 +66,15 @@
         border-radius: 50%;
         border: 3px solid white;
         display: inline-block;
-        margin-left: -10px;
-        /* margin-top: -20px; */
-        /* position: absolute; */
-        /* flex-grow: 0; */
+        margin-left: -8px;
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: 300ms;
+        transition-timing-function: ease-out;
+      }
+      .player-container .button-container .progress-bar-container .progress-bar:hover .dot{
+        opacity: 1;
+        transition-timing-function: ease-in;
       }
       .player-container .button-container .right-buttons{
         margin-right: 1px;
