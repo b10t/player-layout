@@ -47,7 +47,35 @@
         font-family: 'Roboto', sans-serif;
       }
       .player-container .button-container .progress-bar-container .progress-bar{
+        display: flex;
         flex-grow: 1;
+        background-color: grey;
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 5px;
+        border-radius: 3px;
+        align-items: center;
+        /* display: inline-block; */
+      }
+      .player-container .button-container .progress-bar-container .progress-bar .progress-bar-slider{
+        /* flex-grow: 1; */
+        background-color: red;
+        height: 5px;
+        border-radius: 3px;
+        display: inline-block;
+        /* margin-bottom: 10px; */
+      }
+      .player-container .button-container .progress-bar-container .progress-bar .dot{
+        height: 8px;
+        width: 8px;
+        background-color: red;
+        border-radius: 50%;
+        border: 3px solid white;
+        display: inline-block;
+        margin-left: -10px;
+        /* margin-top: -20px; */
+        /* position: absolute; */
+        /* flex-grow: 0; */
       }
       .player-container .button-container .right-buttons{
         margin-right: 1px;
@@ -80,7 +108,10 @@
           <div>
             <span class="js-current-time"></span>
           </div>
-          <div class="progress-bar">----</div>
+          <div class="js-progress progress-bar">
+            <div class="js-progress-slider progress-bar-slider"></div>
+            <div class="dot"></div>
+          </div>
           <div>
             <span class="js-duration"></span>
           </div>
