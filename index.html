@@ -8,77 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-    </style>
-    <style>
-      .player-container {
-        display: flex;
-        flex-direction: column;
-        box-shadow: 0 0 10px rgba(0,0,0,1);
-        width: 800px;
-        height: 600px;
-      }
-      .player-container .video-container {
-        flex-grow: 1;
-      }
-      .player-container .button-container {
-        display: flex;
-        background-color: black;
-        align-items: center;
-        padding-bottom: 4px;
-      }
-      .player-container .button-container .player-button {
-        border-style: none;
-        cursor: pointer;
-        background-color: transparent;
-        font-size: 20px;
-        width: 35px;
-        height: 35px;
-        color: white;
-      }
-      .player-container .button-container .progress-bar-container {
-        display: flex;
-        flex-grow: 1;
-        align-items: center;
-        color: white;
-        font-family: 'Roboto', sans-serif;
-      }
-      .player-container .button-container .progress-bar-container .progress-bar{
-        display: flex;
-        flex-grow: 1;
-        margin-left: 10px;
-        margin-right: 10px;
-        height: 18px;
-        border-radius: 3px;
-        align-items: center;
-      }
-      .player-container .button-container .progress-bar-container .progress-bar .progress-bar-slider{
-        background-color: red;
-        height: 5px;
-        border-radius: 3px;
-        display: inline-block;
-      }
-      .player-container .button-container .progress-bar-container .progress-bar .dot{
-        height: 8px;
-        width: 8px;
-        background-color: red;
-        border-radius: 50%;
-        border: 3px solid white;
-        display: inline-block;
-        margin-left: -8px;
-        opacity: 0;
-        transition-property: opacity;
-        transition-duration: 300ms;
-        transition-timing-function: ease-out;
-      }
-      .player-container .button-container .progress-bar-container .progress-bar:hover .dot{
-        opacity: 1;
-        transition-timing-function: ease-in;
-      }
-      .player-container .button-container .right-buttons{
-        margin-right: 1px;
-      }
     </style>
   </head>
   <body>
